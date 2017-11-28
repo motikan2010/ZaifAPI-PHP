@@ -10,7 +10,7 @@ class ApiRequest
      */
     public static function sendRequest($apiPath)
     {
-        $url = CommonConst::getApiUrl() . $apiPath;
+        $url = CommonConst::API_URL . $apiPath;
         $curl = curl_init($url);
 
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
