@@ -2,19 +2,15 @@
 
 namespace ZaifPHP\Util;
 
-use ZaifPHP\Lib\ApiRequest;
 use ZaifPHP\Lib\CommonConst;
 
-class LastPrice extends ApiType
+class LastPrice extends RequestCreator
 {
-    /**
-     * @param $exchange
-     * @return mixed
-     */
-    private static function sendRequest($exchange)
+    public function __construct()
     {
-        return ApiRequest::sendRequest(CommonConst::getApiType(CommonConst::API_TYPE_LAST_PRICE) .
-            CommonConst::getApiExchange($exchange));
+        parent::__construct(CommonConst::API_TYPE_LAST_PRICE);
     }
+
+
 
 }
