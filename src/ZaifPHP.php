@@ -2,34 +2,49 @@
 
 namespace ZaifPHP;
 
-use ZaifPHP\Util\LastPrice;
-use ZaifPHP\Util\Ticker;
-use ZaifPHP\Util\Trades;
+use ZaifPHP\Config\Api;
+use ZaifPHP\Lib\CommonConst;
+use ZaifPHP\Util\Auth;
+use ZaifPHP\Util\RequestCreator;
+use ZaifPHP\Util\Trade;
 
 class ZaifPHP
 {
     /**
-     * @return LastPrice
+     * @return RequestCreator
      */
     public static function lastPrice()
     {
-        return new LastPrice();
+        return new RequestCreator(CommonConst::API_TYPE_LAST_PRICE);
     }
 
     /**
-     * @return Ticker
+     * @return RequestCreator
      */
     public static function ticker()
     {
-        return new Ticker();
+        return new RequestCreator(CommonConst::API_TYPE_TICKER);
     }
 
     /**
-     * @return Trades
+     * @return RequestCreator
      */
     public static function trades()
     {
-        return new Trades();
+        return new RequestCreator(CommonConst::API_TYPE_TRADES);
+    }
+
+    /**
+     * @return RequestCreator
+     */
+    public static function depth()
+    {
+        return new RequestCreator(CommonConst::API_TYPE_DEPTH);
+    }
+
+    public static function trade()
+    {
+        return new Trade(Api::API_KEY, Api::API_SECRET);
     }
 
 }
