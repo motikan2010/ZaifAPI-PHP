@@ -1,6 +1,6 @@
 <?php
 
-namespace ZaifPHP\Lib;
+namespace ZaifWrapper\Lib;
 
 class ApiRequest
 {
@@ -23,7 +23,8 @@ class ApiRequest
     }
 
     /**
-     * @param $apiPath
+     * @param $header
+     * @param $postDataQuery
      * @return mixed
      */
     public static function sendTradeRequest($header, $postDataQuery)

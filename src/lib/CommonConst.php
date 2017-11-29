@@ -1,6 +1,6 @@
 <?php
 
-namespace ZaifPHP\Lib;
+namespace ZaifWrapper\Lib;
 
 class CommonConst
 {
@@ -16,7 +16,13 @@ class CommonConst
     const API_TYPE_DEPTH      = '/depth';
 
     // Trade API Type
-    const TRADE_GET_INFO = 'get_info';
+    const TRADE_GET_INFO          = 'get_info';
+    const TRADE_GET_INFO2         = 'get_info2';
+    const TRADE_GET_PERSONAL_INFO = 'get_personal_info';
+    const TRADE_GET_ID_INFO       = 'get_id_info';
+    const TRADE_TRADE_HISTORY     = 'trade_history';
+    const TRADE_ACTIVE_ORDERS = 'active_orders';
+    const TRADE_TRADE = 'trade';
 
     // Exchange Type
     const BTC_JPY  = '/btc_jpy';

@@ -1,14 +1,13 @@
 <?php
 
-namespace ZaifPHP;
+namespace ZaifWrapper;
 
-use ZaifPHP\Config\Api;
-use ZaifPHP\Lib\CommonConst;
-use ZaifPHP\Util\Auth;
-use ZaifPHP\Util\RequestCreator;
-use ZaifPHP\Util\Trade;
+use ZaifWrapper\Config\Api;
+use ZaifWrapper\Lib\CommonConst;
+use ZaifWrapper\Util\Trade;
+use ZaifWrapper\Util\RequestCreator;
 
-class ZaifPHP
+class ZaifWrapper
 {
     /**
      * @return RequestCreator

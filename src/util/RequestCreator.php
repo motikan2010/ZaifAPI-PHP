@@ -1,9 +1,9 @@
 <?php
 
-namespace ZaifPHP\Util;
+namespace ZaifWrapper\Util;
 
-use ZaifPHP\Lib\ApiRequest;
-use ZaifPHP\Lib\CommonConst;
+use ZaifWrapper\Lib\ApiRequest;
+use ZaifWrapper\Lib\CommonConst;
 
 class RequestCreator
 {

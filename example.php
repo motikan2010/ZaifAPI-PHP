@@ -2,12 +2,12 @@
 
 require_once './vendor/autoload.php';
 
-use ZaifPHP\ZaifPHP;
+use ZaifWrapper\ZaifWrapper;
 
+$zaif = ZaifWrapper::trade();
 
-// echo ZaifPHP::lastPrice()->monaBtcJson() . PHP_EOL;
-// echo ZaifPHP::trades()->monaBtcJson() . PHP_EOL;
-// echo ZaifPHP::ticker()->monaBtcJson() . PHP_EOL;
+$options = [
 
-$zaif = ZaifPHP::trade();
-var_dump($zaif->info());
+];
+
+var_dump($zaif->trade('mona_jpy', 'bid', 650 , 1, $options));
