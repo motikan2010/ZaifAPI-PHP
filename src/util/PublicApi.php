@@ -5,7 +5,7 @@ namespace ZaifWrapper\Util;
 use ZaifWrapper\Lib\ApiRequest;
 use ZaifWrapper\Lib\CommonConst;
 
-class RequestCreator
+class PublicApi
 {
 
     private $apiType = null;
@@ -39,6 +39,10 @@ class RequestCreator
     {
         return $this->sendRequest(CommonConst::MONA_BTC);
     }
+
+    /**
+     * 配列で取得
+     */
 
     public function btcJpyArray()
     {

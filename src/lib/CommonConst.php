@@ -21,8 +21,12 @@ class CommonConst
     const TRADE_GET_PERSONAL_INFO = 'get_personal_info';
     const TRADE_GET_ID_INFO       = 'get_id_info';
     const TRADE_TRADE_HISTORY     = 'trade_history';
-    const TRADE_ACTIVE_ORDERS = 'active_orders';
-    const TRADE_TRADE = 'trade';
+    const TRADE_ACTIVE_ORDERS     = 'active_orders';
+    const TRADE_TRADE             = 'trade';
+    const CANCEL_ORDER            = 'cancel_order';
+    const WITHDRAW                = 'withdraw';
+    const DEPOSIT_HISTORY         = 'deposit_history';
+    const WITHDRAW_HISTORY        = 'withdraw_history';
 
     // Exchange Type
     const BTC_JPY  = '/btc_jpy';

@@ -4,46 +4,58 @@ namespace ZaifWrapper;
 
 use ZaifWrapper\Config\Api;
 use ZaifWrapper\Lib\CommonConst;
-use ZaifWrapper\Util\Trade;
-use ZaifWrapper\Util\RequestCreator;
+use ZaifWrapper\Util\PublicApi;
+use ZaifWrapper\Util\TradeApi;
 
 class ZaifWrapper
 {
+
     /**
-     * @return RequestCreator
+     * 公開API
+     */
+
+    /**
+     * @return PublicApi
      */
     public static function lastPrice()
     {
-        return new RequestCreator(CommonConst::API_TYPE_LAST_PRICE);
+        return new PublicApi(CommonConst::API_TYPE_LAST_PRICE);
     }
 
     /**
-     * @return RequestCreator
+     * @return PublicApi
      */
     public static function ticker()
     {
-        return new RequestCreator(CommonConst::API_TYPE_TICKER);
+        return new PublicApi(CommonConst::API_TYPE_TICKER);
     }
 
     /**
-     * @return RequestCreator
+     * @return PublicApi
      */
     public static function trades()
     {
-        return new RequestCreator(CommonConst::API_TYPE_TRADES);
+        return new PublicApi(CommonConst::API_TYPE_TRADES);
     }
 
     /**
-     * @return RequestCreator
+     * @return PublicApi
      */
     public static function depth()
     {
-        return new RequestCreator(CommonConst::API_TYPE_DEPTH);
+        return new PublicApi(CommonConst::API_TYPE_DEPTH);
     }
 
+    /**
+     * 取引API
+     */
+
+    /**
+     * @return TradeApi
+     */
     public static function trade()
     {
-        return new Trade(Api::API_KEY, Api::API_SECRET);
+        return new TradeApi(Api::API_KEY, Api::API_SECRET);
     }
 
 }

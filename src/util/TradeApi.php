@@ -11,7 +11,7 @@ use ZaifWrapper\Lib\CommonConst;
  * Class Trade
  * @package ZaifWrapper\Util
  */
-class Trade
+class TradeApi
 {
 
     private $key = null;
@@ -102,6 +102,8 @@ class Trade
     }
 
     /**
+     * 現在有効な注文一覧を取得します（未約定注文一覧）。
+     *
      * @param $options
      * @return mixed
      */
@@ -111,6 +113,8 @@ class Trade
     }
 
     /**
+     * 取引注文を行います。
+     *
      * @param $currencyPair string
      * @param $action string 注文の種類
      * @param $price string 指値注文価格
@@ -132,6 +136,74 @@ class Trade
         }
 
         return $this->execute(CommonConst::TRADE_TRADE, $params);
+    }
+
+    /**
+     * 注文の取消しを行います。
+     *
+     * @param $order_id string 注文ID（tradeまたはactive_ordersで取得できます）
+     * @param null $options
+     * @return mixed
+     */
+    public function cancelOrder($order_id, $options = null)
+    {
+        $params = [
+            'order_id' => $order_id,
+        ];
+
+        if ($options !== null) {
+            $params = array_merge($params, $options);
+        }
+
+        return $this->execute(CommonConst::CANCEL_ORDER, $params);
+    }
+
+    /**
+     * TODO 資金の引き出しリクエストを送信します。
+     */
+    public function withdraw()
+    {
+
+    }
+
+    /**
+     * 入金履歴を取得します。
+     *
+     * @param $currency
+     * @param null $options
+     * @return mixed
+     */
+    public function depositHistory($currency, $options = null)
+    {
+        $params = [
+            'currency' => $currency,
+        ];
+
+        if ($options !== null) {
+            $params = array_merge($params, $options);
+        }
+
+        return $this->execute(CommonConst::DEPOSIT_HISTORY, $params);
+    }
+
+    /**
+     * 出金履歴を取得します。
+     *
+     * @param $currency
+     * @param null $options
+     * @return mixed
+     */
+    public function withdrawHistory($currency, $options = null)
+    {
+        $params = [
+            'currency' => $currency,
+        ];
+
+        if ($options !== null) {
+            $params = array_merge($params, $options);
+        }
+
+        return $this->execute(CommonConst::WITHDRAW_HISTORY, $params);
     }
 
 }
