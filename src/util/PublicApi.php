@@ -20,6 +20,10 @@ class PublicApi
         return ApiRequest::sendRequest($this->apiType . $exchange);
     }
 
+    /**
+     * JSON形式で取得
+     */
+
     public function btcJpyJson()
     {
         return $this->sendRequest(CommonConst::BTC_JPY);
@@ -41,7 +45,7 @@ class PublicApi
     }
 
     /**
-     * 配列で取得
+     * 配列形式で取得
      */
 
     public function btcJpyArray()

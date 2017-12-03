@@ -53,7 +53,7 @@ class ZaifWrapper
     /**
      * @return TradeApi
      */
-    public static function trade()
+    public static function privateTrade()
     {
         return new TradeApi(Api::API_KEY, Api::API_SECRET);
     }
