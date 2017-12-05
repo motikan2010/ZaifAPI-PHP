@@ -10,10 +10,10 @@ class CommonConst
     const TRADE_API_PATH  = '/tapi';
 
     // Public API Type
-    const API_TYPE_LAST_PRICE = '/last_price';
-    const API_TYPE_TICKER     = '/ticker';
-    const API_TYPE_TRADES     = '/trades';
-    const API_TYPE_DEPTH      = '/depth';
+    const API_TYPE_LAST_PRICE = 'last_price';
+    const API_TYPE_TICKER     = 'ticker';
+    const API_TYPE_TRADES     = 'trades';
+    const API_TYPE_DEPTH      = 'depth';
 
     // Trade API Type
     const TRADE_GET_INFO          = 'get_info';
@@ -29,9 +29,14 @@ class CommonConst
     const WITHDRAW_HISTORY        = 'withdraw_history';
 
     // Exchange Type
-    const BTC_JPY  = '/btc_jpy';
-    const XEM_JPY  = '/xem_jpy';
-    const MONA_JPY = '/mona_jpy';
-    const MONA_BTC = '/mona_btc';
+    const BTC_JPY  = 'btc_jpy';
+    const XEM_JPY  = 'xem_jpy';
+    const MONA_JPY = 'mona_jpy';
+    const ETH_JPY  = 'eth_jpy';
+    const BCH_JPY  = 'bch_jpy';
+    const XEM_BTC  = 'xem_btc';
+    const MONA_BTC = 'mona_btc';
+    const ETH_BTC  = 'eth_btc';
+    const BCH_BTC  = 'bch_btc';
 
 }

@@ -17,59 +17,60 @@ class PublicApi
 
     private function sendRequest($exchange)
     {
-        return ApiRequest::sendRequest($this->apiType . $exchange);
+        return ApiRequest::sendRequest($this->apiType, $exchange);
     }
 
     /**
-     * JSON形式で取得
+     * To JPY
      */
 
-    public function btcJpyJson()
+    public function btcJpy()
     {
         return $this->sendRequest(CommonConst::BTC_JPY);
     }
 
-    public function xemJpyJson()
+    public function xemJpy()
     {
         return $this->sendRequest(CommonConst::XEM_JPY);
     }
 
-    public function monaJpyJson()
+    public function monaJpy()
     {
         return $this->sendRequest(CommonConst::MONA_JPY);
     }
 
-    public function monaBtcJson()
+    public function ethJpy()
+    {
+        return $this->sendRequest(CommonConst::ETH_JPY);
+    }
+
+    public function bchJpy()
+    {
+        return $this->sendRequest(CommonConst::BCH_JPY);
+    }
+
+    /**
+     * To BTC
+     */
+
+    public function xemBtc()
+    {
+        return $this->sendRequest(CommonConst::XEM_BTC);
+    }
+
+    public function monaBtc()
     {
         return $this->sendRequest(CommonConst::MONA_BTC);
     }
 
-    /**
-     * 配列形式で取得
-     */
-
-    public function btcJpyArray()
+    public function ethBtc()
     {
-        $resJson = $this->btcJpyJson();
-        return json_decode($resJson, true);
+        return $this->sendRequest(CommonConst::ETH_BTC);
     }
 
-    public function xemJpyArray()
+    public function bchBtc()
     {
-        $resJson = $this->xemJpyJson();
-        return json_decode($resJson, true);
-    }
-
-    public function monaJpyArray()
-    {
-        $resJson = $this->monaJpyJson();
-        return json_decode($resJson, true);
-    }
-
-    public function monaBtcArray()
-    {
-        $resJson = $this->monaBtcJson();
-        return json_decode($resJson, true);
+        return $this->sendRequest(CommonConst::BCH_BTC);
     }
 
 }

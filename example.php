@@ -6,7 +6,7 @@ use ZaifWrapper\ZaifWrapper;
 
 $lastPrice = ZaifWrapper::lastPrice();
 
-$lastPrice->btcJpyJson();
+$lastPrice->btcJpy();
 /*
 {
     "last_price": 1243000.0
@@ -14,16 +14,7 @@ $lastPrice->btcJpyJson();
  */
 
 
-$lastPrice->btcJpyArray();
-/*
-array(1) {
-  ["last_price"]=>
-  float(1243000)
-}
-*/
-
-
-ZaifWrapper::ticker()->btcJpyJson();
+ZaifWrapper::ticker()->btcJpy();
 /*
 {
     "last": 1243000.0,

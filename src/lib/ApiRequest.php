@@ -5,12 +5,13 @@ namespace ZaifWrapper\Lib;
 class ApiRequest
 {
     /**
-     * @param $apiPath
+     * @param $apiType
+     * @param $exchange
      * @return mixed
      */
-    public static function sendRequest($apiPath)
+    public static function sendRequest($apiType, $exchange)
     {
-        $url = CommonConst::API_URL . CommonConst::PUBLIC_API_PATH . $apiPath;
+        $url = CommonConst::API_URL . CommonConst::PUBLIC_API_PATH . '/' . $apiType . '/' . $exchange;
         $curl = curl_init($url);
 
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, 'GET');
